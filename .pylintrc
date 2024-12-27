@@ -1,6 +1,8 @@
 [MAIN]
 
 disable=
+      C0116,
+      C0115,
       C0114, # Missing-module-docstring C0115, # Missing-class-docstringi C0116, # Missing-function-docstring
       W0703, # Catching too general exception Exception
       C0209, # Consider-using-f-string
