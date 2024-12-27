@@ -10,7 +10,10 @@ disable=
       C0304,
       C0303,
       R0903,
-      C0301
+      C0301,
+      W0311,
+      C0411,
+      C0103
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
