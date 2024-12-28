@@ -21,7 +21,7 @@ def test_insert_person():
     repo = PeopleRepository(db_connection_handler)
     repo.insert_person("João", "Silva", 30, 1)
     
-
+@pytest.mark.skip(reason="interacao com o banco") 
 def test_get_person():
     person_id = 1
     
