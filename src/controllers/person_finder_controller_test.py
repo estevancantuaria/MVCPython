@@ -8,7 +8,7 @@ class MockPerson():
 
     
 class MockPeopleRepository:
-    def get_person_by_id(self) -> MockPerson:
+    def get_person_by_id(self, person_id: int) -> MockPerson:  # pylint: disable=unused-argument
         return MockPerson(
             first_name="John",
             last_name="Doe",
