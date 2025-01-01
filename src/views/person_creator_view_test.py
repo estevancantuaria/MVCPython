@@ -9,7 +9,7 @@ class MockPeopleRepository:
 def mockPersonCreatorController():
     return PersonCreatorController(MockPeopleRepository())
 
-def test_handle():
+def test_create():
     controller = mockPersonCreatorController()
     view = PersonCreatorView(controller)
     http_request = HttpRequest(body={"first_name": "John", "last_name": "Doe", "age": 30, "pet_id": 1})
