@@ -6,4 +6,5 @@ class PetDeleterController(PetDeleterControllerInterface):
         self.__pets_repository = pets_repository
         
     def delete(self, name: str) -> None:
-        self.__pets_repository.delete_pets(name)
+        result =self.__pets_repository.delete_pets(name)
+        print(result)

@@ -21,11 +21,16 @@ class PeopleRepository(PeopleRepositoryInterface):
         with self.__db_connection as database:
             try:
                 person = (
-                    database.session
+                  database.session
                     .query(PeopleTable)
-                    .outerjoin(Pet, Pet.id == PeopleTable.pet_id)
+                    .join(Pet, Pet.id == PeopleTable.pet_id)
                     .filter(PeopleTable.id == person_id)
-                    .with_entities(PeopleTable.first_name, PeopleTable.last_name,Pet.name)
+                    .with_entities(
+                        PeopleTable.first_name,
+                        PeopleTable.last_name,
+                        Pet.name.label("pet_name"),
+                        Pet.type.label("pet_type")
+                    )
                     .one()
                 )
                 

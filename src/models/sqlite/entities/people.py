@@ -10,6 +10,5 @@ class PeopleTable(Base):
     last_name = Column(String, nullable=False)
     age = Column(BIGINT, nullable=False)
     pet_id = Column(BIGINT, ForeignKey("pets.id"), nullable=False)
-
     def __repr__(self):
         return f"PeopleTable(id={self.id}, first_name={self.first_name}, last_name={self.last_name}, age={self.age}, pet_id={self.pet_id})"
